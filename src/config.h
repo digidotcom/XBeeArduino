@@ -44,7 +44,7 @@ extern "C"
 #define UART_WRITE_TIMEOUT_MS 10
 
 #define API_FRAME_DEBUG_PRINT_ENABLED 0
-#if API_FRAME_DEBUG_PRINT_ENABLED
+#if API_FRAME_DEBUG_PRINT_ENABLED 
 #define APIFrameDebugPrint(...) portDebugPrintf(__VA_ARGS__)
 #else
 #define APIFrameDebugPrint(...)

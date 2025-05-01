@@ -10,8 +10,8 @@
  * This file contains the implementation of the XBeeArduino class, which provides an interface 
  * for interacting with XBee modules on an Arduino platform.
  * 
- * @version 1.0
- * @date 2024-08-17
+ * @version 1.1
+ * @date 2025-05-01
  * author Felix Galindo
  * 
  * @license MIT
@@ -130,7 +130,7 @@ bool XBeeArduino::disconnect() {
 template <typename T>
 bool XBeeArduino::sendData(const T& data) {
     if (moduleType_ == XBEE_LORA) {
-        return XBeeSendData(xbee_, &data);
+        return XBeeSendData(xbee_, &data) == API_SEND_SUCCESS;
     }
     return false;
 }
